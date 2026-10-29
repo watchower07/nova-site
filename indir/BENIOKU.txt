@@ -1,0 +1,4 @@
+Bu klasöre yükleyin:
+  Nova.apk            (Android — imzalı yayın APK'sı)
+  Nova_Kurulum.exe    (Windows kurulum paketi)
+Dosya adlarını değiştirirseniz yapilandirma.js'yi de güncelleyin.

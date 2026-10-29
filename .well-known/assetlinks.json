@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.novaart3d.novasayim",
+      "sha256_cert_fingerprints": [
+        "6A:E1:CA:95:FB:F8:A3:DB:06:65:80:6A:22:EF:BE:0A:2C:5D:2D:DD:93:72:E8:DD:4F:03:A5:DA:B4:52:C5:AD"
+      ]
+    }
+  }
+]

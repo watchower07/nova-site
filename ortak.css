@@ -1,0 +1,31 @@
+:root { --lacivert:#16314F; --lacivert2:#0E2238; --turuncu:#E0701C; --mavi:#2B6CB0; --yazi:#17283B; --soluk:#5A6B80; --zemin:#EEF2F7; --kart:#FFFFFF; --cizgi:#DCE4EE; }
+@media (prefers-color-scheme: dark) { :root { --yazi:#E8EEF5; --soluk:#A7B6C7; --zemin:#0E1A28; --kart:#172638; --cizgi:#2A3D55; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; background: var(--zemin); color: var(--yazi); line-height: 1.5; }
+.ust { background: linear-gradient(135deg, var(--lacivert2), var(--lacivert) 55%, #1d4a78); color: #fff; padding: 40px 16px 72px; }
+.ic { max-width: 720px; margin: 0 auto; }
+.marka { display: flex; align-items: center; gap: 14px; }
+.logo { width: 60px; height: 60px; border-radius: 14px; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.marka h1 { margin: 0; font-size: 28px; letter-spacing: .2px; }
+.marka .alt { font-size: 14px; color: #B9C8DA; }
+.ust p { color: #DCE6F2; max-width: 560px; margin: 22px 0 0; font-size: 16px; }
+main { padding: 0 16px 48px; }
+.kart { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 16px; padding: 22px; margin-top: -44px; box-shadow: 0 10px 30px rgba(10,30,60,.10); }
+.kart + .kart { margin-top: 16px; }
+.kart h2 { margin: 0 0 6px; font-size: 18px; }
+.kart p { margin: 0 0 14px; color: var(--soluk); font-size: 15px; }
+.dugmeler { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.dugme { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 16px; border-radius: 12px; text-decoration: none;
+         border: 1px solid var(--cizgi); color: var(--yazi); background: var(--kart); font-weight: 600; }
+.dugme:hover { border-color: var(--mavi); }
+.dugme small { display: block; font-weight: 400; color: var(--soluk); font-size: 12px; }
+.dugme.ana { background: var(--turuncu); border-color: var(--turuncu); color: #fff; }
+.dugme.ana small { color: #FFE7D3; }
+.dugme.pasif { opacity: .55; pointer-events: none; }
+.dugme svg { flex-shrink: 0; }
+.kod { font-family: Consolas, ui-monospace, monospace; background: var(--zemin); border-radius: 6px; padding: 2px 8px; }
+ol { margin: 0; padding-left: 20px; color: var(--soluk); font-size: 15px; }
+ol li + li { margin-top: 6px; }
+footer { text-align: center; color: var(--soluk); font-size: 13px; padding: 8px 16px 32px; }
+footer a { color: inherit; }

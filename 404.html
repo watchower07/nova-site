@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Nova etiketi</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/ortak.css" />
+</head>
+<body data-vurgusuz>
+  <header class="ust">
+    <div class="ic">
+      <div class="marka">
+        <img class="logo" src="/logo.png" alt="Nova" />
+        <div><h1>Nova etiketi</h1><div class="alt">Demirbaş Takip ve Sayım Programı</div></div>
+      </div>
+      <p>Bu etiket <span class="kod" id="etiket" style="color:#fff;background:rgba(255,255,255,.12)">—</span> Nova uygulamasıyla açılır. Demirbaşın yeri ve bilgileri sadece işletmenin kendi sistemindeki yetkili kullanıcılara gösterilir.</p>
+    </div>
+  </header>
+  <main>
+    <div class="ic">
+      <section class="kart">
+        <h2>Uygulama yüklü mü?</h2>
+        <p>Yüklüyse aşağıdaki düğmeyle açın. Yüklü değilse önce uygulamayı indirin, sonra etiketi tekrar okutun.</p>
+        <div class="dugmeler" style="margin-bottom:14px">
+          <a class="dugme ana" id="ac" href="#"><span>Uygulamada aç<small>Nova</small></span></a>
+        </div>
+        <div class="dugmeler">
+          <a class="dugme" id="indir-android" href="#">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22a11.4 11.4 0 0 0-9.84 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+            <span>Android<small>APK dosyasını indir</small></span>
+          </a>
+          <a class="dugme" id="indir-ios" href="#">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.5c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76A4.27 4.27 0 0 0 5.24 9.7c-1.54 2.67-.39 6.62 1.1 8.79.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.87.69 1.18-.02 1.93-1.08 2.66-2.14a9.4 9.4 0 0 0 1.2-2.47 3.84 3.84 0 0 1-2.29-3.56zM14.2 6.05A3.9 3.9 0 0 0 15.12 3a3.97 3.97 0 0 0-2.58 1.33 3.7 3.7 0 0 0-.94 2.9 3.29 3.29 0 0 0 2.6-1.18z"/></svg>
+            <span>iPhone / iPad<small>App Store</small></span>
+          </a>
+          <a class="dugme" id="indir-windows" href="#">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3v-6zm0 13l7.5 1v-7H3v6zm8.5 1.15L21 21v-8.5h-9.5v7.15zM11.5 4.35V11.5H21V3l-9.5 1.35z"/></svg>
+            <span>Windows<small>Sunucu ve masaüstü kurulumu</small></span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>Nova · <a href="/">sayim.novaart3d.com</a></footer>
+  <script>
+    // GitHub Pages: /d/... dışındaki bilinmeyen yollar ana sayfaya gider
+    if (!/^\/d(\/|$)/.test(location.pathname)) location.replace("/");
+  </script>
+  <script src="/yapilandirma.js"></script>
+  <script src="/indir.js"></script>
+  <script>
+    // /d/DLR/DMB-00001 → uygulama bağlantısı novasayim://d/DLR/DMB-00001 (sadece görüntü; sunucuya veri gitmez)
+    (function () {
+      var yol = location.pathname.replace(/^\/d\//, "").replace(/\/+$/, "");
+      var parca = yol.split("/").filter(Boolean).slice(0, 2).map(function (p) { try { return decodeURIComponent(p); } catch (e) { return p; } });
+      if (!parca.length || /\.html$/.test(parca[0])) return;
+      document.getElementById("etiket").textContent = parca.join(" · ");
+      document.getElementById("ac").href = "novasayim://d/" + parca.map(encodeURIComponent).join("/");
+    })();
+  </script>
+</body>
+</html>

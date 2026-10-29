@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.com.novaart3d.novasayim"],
+        "components": [
+          { "/": "/d/*", "comment": "Nova demirbaş etiketi" }
+        ]
+      }
+    ]
+  }
+}
