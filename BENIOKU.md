@@ -24,7 +24,7 @@ Google Play'e de koyarsanız Play Console › Uygulama imzalama sayfasındaki SH
 - Uygulama yayın (Release) derlemesinde `Platforms/iOS/Entitlements.Yayin.plist` ile imzalanır.
 
 ## 4. İndirme dosyaları
-`indir/` klasörüne `Nova.apk` ve `Nova_Kurulum.exe` yükleyin; App Store bağlantısı alınca `yapilandirma.js`'ye yazın.
+Bağlantılar her yayında kendiliğinden güncellenir: `yayinla.ps1` Cloudflare R2’ye (indir.novaart3d.com) `son.js` yükler, sayfa açılışta onu okur. `yapilandirma.js`’deki adresler yalnızca `son.js` okunamazsa kullanılır; App Store bağlantısı alınca oraya yazın.
 
 Not: Alan adı değişirse `EtiketBaglantisi.WebAlanAdi` (Shared), `Entitlements.Yayin.plist` ve bu dosyalar birlikte değişmelidir.
 Programda **Ayarlar › Genel Ayarlar › Etiket QR bağlantısı › Web bağlantısı** seçilince yeni etiketler bu adresle basılır.

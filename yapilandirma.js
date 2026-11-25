@@ -1,5 +1,9 @@
+// İndirme bağlantıları. Yayın betiği (yayinla.ps1) her sürümde indir.novaart3d.com/son.js dosyasını günceller;
+// sayfa açılışta onu okur ve buradaki değerlerin yerine son sürümü koyar. Buradakiler son.js okunamazsa kullanılır.
 window.NOVA = {
-  android: "https://lwjgyuhbxeufwhmjarng.supabase.co/storage/v1/object/public/nova-indir/Nova.apk",
+  android: "https://indir.novaart3d.com/Nova_1.1.14.apk",
   ios: "",
-  windows: "",          // Windows kurulumu hazır olunca: "/indir/Nova_Kurulum.exe"
+  windows: "https://indir.novaart3d.com/Nova_Kurulum_1.1.14.exe",
+  surum: "1.1.14",
+  sonSurumAdresi: "https://indir.novaart3d.com/son.js",
 };
